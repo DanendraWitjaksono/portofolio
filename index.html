@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio | Nama Kamu</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --grad-1: linear-gradient(135deg, #6d28d9, #9333ea, #22d3ee);
+        --grad-2: linear-gradient(135deg, #020617, #0f172a, #020617);
+        --neon: #a855f7;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--grad-2);
+        color: #e5e7eb;
+        scroll-behavior: smooth;
+      }
+
+      /* Navbar */
+      .navbar {
+        background: rgba(2, 6, 23, 0.8);
+        backdrop-filter: blur(12px);
+      }
+
+      .navbar-brand span {
+        background: var(--grad-1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .nav-link.active {
+        color: #22d3ee !important;
+      }
+
+      /* Hero */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background: radial-gradient(circle at left, #3b0764, #020617 60%);
+      }
+
+      .hero h1 span {
+        background: var(--grad-1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .photo-frame {
+        padding: 6px;
+        border-radius: 24px;
+        background: var(--grad-1);
+        box-shadow: 0 0 40px rgba(168, 85, 247, 0.4);
+      }
+
+      .photo-frame img {
+        border-radius: 20px;
+        width: 100%;
+      }
+
+      /* Section */
+      .section-padding {
+        padding: 100px 0;
+      }
+
+      .section-title span {
+        background: var(--grad-1);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Glass Card */
+      .glass {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 24px;
+        backdrop-filter: blur(14px);
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+      }
+
+      /* Tech badge */
+      .tech {
+        border: 1px solid var(--neon);
+        color: #e9d5ff;
+        padding: 8px 18px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        margin: 6px;
+        display: inline-block;
+        background: rgba(168, 85, 247, 0.1);
+      }
+
+      /* Button */
+      .btn-neon {
+        background: var(--grad-1);
+        border: none;
+        color: #020617;
+        font-weight: 600;
+        border-radius: 999px;
+        padding: 12px 28px;
+      }
+
+      .btn-outline-neon {
+        border: 1px solid #22d3ee;
+        color: #22d3ee;
+        border-radius: 999px;
+        padding: 12px 28px;
+      }
+
+      footer {
+        background: #020617;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home"
+          >PORTO<span>FOLIO.</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav ms-auto gap-lg-4">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-5 text-center">
+            <div class="photo-frame">
+              <img src="profile.jpg" alt="foto" />
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <h1 class="display-5 fw-bold">
+              Halo, saya <span>Danendra Witjaksono</span>
+            </h1>
+            <h4 class="mt-3">
+              Saya adalah seorang
+              <span style="color: #22d3ee">Frontend / Mobile Developer</span>
+            </h4>
+            <p class="mt-4 text-secondary">
+              Mahasiswa / Pelajar Teknik Informatika yang fokus membangun
+              aplikasi modern menggunakan teknologi terkini.
+            </p>
+            <div class="mt-4">
+              <a href="#projects" class="btn btn-neon me-3"
+                ><i class="bi bi-code-slash"></i> Link Project</a
+              >
+              <a href="#" class="btn btn-outline-neon"
+                ><i class="bi bi-github"></i> GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <h2 class="text-center section-title">Tentang <span>Saya</span></h2>
+        <p class="text-center text-secondary mb-5">
+          Passion dalam pengembangan aplikasi modern
+        </p>
+
+        <div class="glass p-5 col-lg-10 mx-auto">
+          <p>
+            Saya adalah developer dengan fokus pada pengembangan aplikasi web
+            dan mobile. Memiliki pengalaman membangun sistem fullstack
+            menggunakan teknologi modern seperti Next.js, React Native, FastAPI,
+            dan Supabase.
+          </p>
+
+          <h5 class="mt-4">Teknologi yang dikuasai:</h5>
+          <div class="mt-3">
+            <span class="tech">Next.js</span>
+            <span class="tech">React Native</span>
+            <span class="tech">FastAPI</span>
+            <span class="tech">Supabase</span>
+            <span class="tech">PostgreSQL</span>
+            <span class="tech">TypeScript</span>
+            <span class="tech">Git</span>
+            <span class="tech">REST API</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section-padding">
+      <div class="container">
+        <h2 class="text-center section-title">My <span>Projects</span></h2>
+        <p class="text-center text-secondary mb-5">
+          Beberapa project yang pernah saya kerjakan
+        </p>
+
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="glass p-4 h-100">
+              <h5>Portfolio Website</h5>
+              <p class="text-secondary">
+                Website portofolio modern dengan Bootstrap dan JavaScript.
+              </p>
+              <div class="mt-3">
+                <span class="tech">HTML</span>
+                <span class="tech">Bootstrap</span>
+                <span class="tech">JS</span>
+              </div>
+              <div class="mt-4">
+                <a href="#" class="btn btn-sm btn-neon">Live Demo</a>
+                <a href="#" class="btn btn-sm btn-outline-neon ms-2">Source</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="glass p-4 h-100">
+              <h5>To-Do App</h5>
+              <p class="text-secondary">
+                Aplikasi manajemen tugas sederhana berbasis JavaScript.
+              </p>
+              <div class="mt-3">
+                <span class="tech">JavaScript</span>
+                <span class="tech">REST API</span>
+              </div>
+              <div class="mt-4">
+                <a href="#" class="btn btn-sm btn-neon">Live Demo</a>
+                <a href="#" class="btn btn-sm btn-outline-neon ms-2">Source</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="glass p-4 h-100">
+              <h5>Landing Page</h5>
+              <p class="text-secondary">
+                Landing page responsif dengan desain modern.
+              </p>
+              <div class="mt-3">
+                <span class="tech">HTML</span>
+                <span class="tech">CSS</span>
+                <span class="tech">Bootstrap</span>
+              </div>
+              <div class="mt-4">
+                <a href="#" class="btn btn-sm btn-neon">Live Demo</a>
+                <a href="#" class="btn btn-sm btn-outline-neon ms-2">Source</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <h2 class="text-center section-title">Contact <span>Me</span></h2>
+        <p class="text-center text-secondary mb-5">
+          Tertarik bekerja sama? Hubungi saya
+        </p>
+
+        <div class="glass p-5 col-lg-8 mx-auto text-center">
+          <p class="mb-4">
+            Saya terbuka untuk kolaborasi, freelance, maupun diskusi teknologi.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="mailto:dndra.wj@gmail.com" class="btn btn-neon"
+              ><i class="bi bi-envelope"></i> Email</a
+            >
+            <a
+              href="https://github.com/DanendraWitjaksono"
+              class="btn btn-outline-neon"
+              ><i class="bi bi-github"></i> GitHub</a
+            >
+            <a
+              href="https://www.instagram.com/dndra.wj?igsh=c3Zmdmp2b281N3Zn"
+              class="btn btn-outline-neon"
+              ><i class="bi bi-instagram"></i> Instagram</a
+            >
+            <a href="#" class="btn btn-outline-neon"
+              ><i class="bi bi-linkedin"></i> LinkedIn</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+      © 2025 Danendra Witjaksono • Portfolio • GitHub Pages
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
